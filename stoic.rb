@@ -3,7 +3,7 @@ class Stoic < Formula
   homepage "https://github.com/skatkov/stoic"
   url "https://github.com/skatkov/stoic/archive/refs/tags/0.4.tar.gz"
   version "0.5"
-  # sha256 "af0f8dc4fb6b8b8b4bc25a962e8e4393671afd346a75e529f65c19c5275e1f4e"
+  sha256 "af0f8dc4fb6b8b8b4bc25a962e8e4393671afd346a75e529f65c19c5275e1f4e"
   license "MIT"
   head "https://github.com/skatkov/stoic.git", branch: "main"
 
