@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Glamorous API documentation browser in console for Ruby developers"
   homepage "https://poshtui.com"
-  version "0.2.1"
+  version "0.2.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.1/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "cb62e67db16b176f819acc448de8d6bd38e554ef8056cf7c5a345c086c962a88"
+    if Hardware::CPU.intel?
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.4/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "49f9d7e568107725bc2c6f65b8236322072d4e3afa52a902c24ba185c4994954"
 
       def install
         bin.install "posh"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.1/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "6985509d175bb1b007cbbdd0d7bb73e55a96538f16897a889da429d3c9cea079"
+    if Hardware::CPU.arm?
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.4/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "07f6452b012283dff142f149efb6d9af56f77c42a0789e3713423a70cd7e48b2"
 
       def install
         bin.install "posh"
@@ -27,17 +27,17 @@ class Poshtui < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.1/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "2c024cb05fa557e003f56940785762069bd87a8a64e2228f2dfa04a0362cbc6d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.4/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "d37e226b71f67abbd59f914ecabb11ce4666d31603b88b9a5a62a555c3faf723"
 
       def install
         bin.install "posh"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.1/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "bef695ae59ac35118c1ce4df2c7c3e2a7217487cb91801b7a3c994a4708f6b8a"
+    if Hardware::CPU.intel?
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.2.4/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "d3d168c3bb33fec38b36aa641f03f9f66770e41f80e1845e85217e23a953f224"
 
       def install
         bin.install "posh"
