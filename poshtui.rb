@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Glamorous API documentation browser in console for Ruby developers"
   homepage "https://poshtui.com"
-  version "0.4.3"
+  version "0.4.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.3/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "6ef95c08a938e7096d490cd1318c54711f543ade5930eb4d6dcc257f479dfb13"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.4/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "6de3bc45e164dc50727e5e13c745fdd4933ba79493c967bff5034d5ab874cf1d"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.3/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "62def5128ec8cc401233ee717a54e22d75608d6f4854e4e24f099602f785ba2b"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.4/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "c38a938078dfbbfc22e2ec3911229a4261b75c968afbf815d24c93c30322adfd"
 
       def install
         bin.install "posh"
@@ -28,16 +28,16 @@ class Poshtui < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.3/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "1c2275d1d66dab37d3ae5df3ccb182ecc7a0b49e9dc77c1a82d8aca47b4782ef"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.4/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "f65b39be693eaa1b7c6d87964cdfa7c93bbc0d24219eca487b18e98b544797a1"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.3/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "9466b3c0c23ba42a0646164582235bf6029a4ec5d0bf8a86814459a2e060c082"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.4/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "8bb86ea1563bcaee7ac592fb990fef03ac021943764bbacbe521046927372613"
 
       def install
         bin.install "posh"
@@ -46,6 +46,7 @@ class Poshtui < Formula
   end
 
   def post_install
-    exec "#{bin}/posh docsets"
+    ohai "'posh' needs documentation to be stored in ~/Library/Application Support/posh folder"
+    ohai "Please, run `posh docsets` manually to download documentation"
   end
 end
