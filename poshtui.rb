@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Glamorous API documentation browser in console for Ruby developers"
   homepage "https://poshtui.com"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.1/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "2493f03d9436ac8e77476698113096e2c978a6e39c5e31fe02e05bed938a7d96"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.2/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "ac57e7296384f7662ee76b10efd1d87a4501204f6bfc7aad7565a59dc7211813"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.1/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "39bcf89ebe2b26fe25d4689eb735960db663b4d8c5a92a7b902672b88683b0d5"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.2/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "202751a33d11c94e19393f5535338f297fe9d46b24862e2a73b732f332d7698e"
 
       def install
         bin.install "posh"
@@ -28,16 +28,16 @@ class Poshtui < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.1/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "b8df12b282aa75cada00a8183de7d06b9eb515e99662899adeddf885fe0ac37a"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.2/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "50440f33052e8ee66a6b4598ef65fdc1b55e9a2b2ea75b07abfd44f7b10c15a1"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.1/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "6f5f9c61efd04cad99d4dd2b3eb334d44128c04d3635adf6286857ad7432d17f"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.4.2/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "b4f040c8158b3ecb1247b802ac6710866b3580ad453f74691f79958413533712"
 
       def install
         bin.install "posh"
@@ -47,6 +47,6 @@ class Poshtui < Formula
 
   def post_install
     (share/"posh").mkpath unless File.exists? (share/"posh")
-    system "#{bin}/posh", "docsets", "-o", "#{share}/posh"
+    system "#{bin}/posh", "docsets"
   end
 end
