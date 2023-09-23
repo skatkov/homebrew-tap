@@ -1,8 +1,8 @@
 class Stoic < Formula
   desc "Command-line app for daily journaling with plain-text files"
   homepage "https://github.com/skatkov/stoic"
-  url "https://github.com/skatkov/stoic/archive/refs/tags/0.5.tar.gz"
-  version "0.5"
+  url "https://github.com/skatkov/stoic/archive/refs/tags/0.6.tar.gz"
+  version "0.6"
   sha256 "2e6246b691ff59edf3626b6e5b57da4155d3b8e2db9d3c1add804602698c54e6"
   license "MIT"
   head "https://github.com/skatkov/stoic.git", branch: "main"
