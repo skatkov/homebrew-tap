@@ -5,20 +5,20 @@
 class Stoic < Formula
   desc "Command-line application for daily journaling with plain-text files"
   homepage "https://github.com/skatkov/stoic"
-  version "0.6.1"
+  version "0.6.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.1/stoic_Darwin_arm64.tar.gz"
-      sha256 "52178b46a4581af71d9b63fedb13894c5c933007b20f701d67f3223f7bae6993"
+    if Hardware::CPU.intel?
+      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Darwin_x86_64.tar.gz"
+      sha256 "3e747fc96bb0faed8514ce9d3a9bc6931186ec9f9449343a5d86323a214cd866"
 
       def install
         bin.install "stoic"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.1/stoic_Darwin_x86_64.tar.gz"
-      sha256 "c7f0d0a5c8431bd1f233a41001f68449441c63b65168be18cd5b7818c9650025"
+    if Hardware::CPU.arm?
+      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Darwin_arm64.tar.gz"
+      sha256 "f7f77706508ec7e09b631ec5888b420fd27c85fcf99642df447782a1e208d39b"
 
       def install
         bin.install "stoic"
@@ -28,16 +28,16 @@ class Stoic < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.1/stoic_Linux_arm64.tar.gz"
-      sha256 "da61f9b12b89ba34f5b1e401a5b3aaa2cbd9a2c6b4d808b74fe8a0e432cacf5c"
+      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Linux_arm64.tar.gz"
+      sha256 "7abeca398aa99264e4c37c255d5f8824712f65444b3d6b44784294a9d1286fba"
 
       def install
         bin.install "stoic"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.1/stoic_Linux_x86_64.tar.gz"
-      sha256 "d86bada99b4b243e1d83562d25ca68f65b96d87e990e937d9b65b80e80ad8c38"
+      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Linux_x86_64.tar.gz"
+      sha256 "ee39cafb761a24cf01a136b23a8583ec1c3e3f45d3c1c67dff5849009d041022"
 
       def install
         bin.install "stoic"
