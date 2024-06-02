@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Glamorous API documentation browser in console for Ruby developers"
   homepage "https://poshtui.com"
-  version "0.7"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "f7c9c03e5b3fd59c0df34ffe434249949918e2c3c22e03f580facba338f693ad"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7.1/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "7fac73300b9b4dac3a48452e969ccc6ae5892d648564f32b25aefef6d92e2a84"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "ae4293ac434c40770172c7fa93e274775ed5680a0291cd5311968165d0b8d7b5"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7.1/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "98ec897ba2c2ccfa0a430a362bd88e0fd665c32ecf21910a2afba292d28a3a40"
 
       def install
         bin.install "posh"
@@ -28,16 +28,16 @@ class Poshtui < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "1b882dbd5e36c1aac0879a96a5e8a781bd05eef62f9f275a1e8afd381904e2b5"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7.1/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "129451f9f15ffcf22f8472c3aec34c9d4e5527a6cfe534b2ca3b6c4edc14c5d2"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "42819f20905ea9346b5b4c51daa2bd24fa9d7de688baabec2a3e61a0a1c75ba6"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.7.1/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "925d042a98b913ed0793a22e98d912d4d3c4ce286b834ef031cce4209e79b508"
 
       def install
         bin.install "posh"
