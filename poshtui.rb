@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Glamorous API documentation browser in console for Ruby developers"
   homepage "https://poshtui.com"
-  version "0.8"
+  version "0.9"
 
   on_macos do
     on_intel do
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.8/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "a2e87f7b34265184723c2a1effc9cd771f9a51dfee8d56cbdeba1a99774a9395"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.9/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "4ed82b37716763404566749b4b20439d9b223e85847bffe64212314de0fa7305"
 
       def install
         bin.install "posh"
       end
     end
     on_arm do
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.8/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "5ca9a31487dce011fa4cf39829acf2b5ab4268675668c9f85c7ba64741c595cc"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.9/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "04008e21fc22eca15597f96dce59299838cd38e4ee7886fa82e8cda4ecc0922d"
 
       def install
         bin.install "posh"
@@ -29,8 +29,8 @@ class Poshtui < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/0.8/homebrew-tap_Linux_x86_64.tar.gz"
-        sha256 "3dea6d77255c5cd22d46aebdcdee09fa3f404e9490edc94ba7e856ae7ffaaf48"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/0.9/homebrew-tap_Linux_x86_64.tar.gz"
+        sha256 "d8ad1973e3be32eca74c01d4a93be68daf802b624e5546bc8a1018a7eaed16bf"
 
         def install
           bin.install "posh"
@@ -39,8 +39,8 @@ class Poshtui < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/0.8/homebrew-tap_Linux_arm64.tar.gz"
-        sha256 "a4adb22440d1de1658dcc5afde11979f5cd1ffa52ce528791abb93d196292553"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/0.9/homebrew-tap_Linux_arm64.tar.gz"
+        sha256 "09134d9ef01c708846113c2d797ae39ae2d551e7499331417129affff26e92ac"
 
         def install
           bin.install "posh"
