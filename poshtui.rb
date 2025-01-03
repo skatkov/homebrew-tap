@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Glamorous API documentation browser in console for Ruby developers"
   homepage "https://poshtui.com"
-  version "0.10.0"
+  version "0.11.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.10.0/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "6d9a90c38b121beae0e920ecc0bda74d7c805bff1f41213e186170430fa8334d"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.11.0/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "b5d45deedc94f247e77c59573731731e4dc49997020a1c31091a5bdfbdecf1d5"
 
       def install
         bin.install "posh"
       end
     end
     on_arm do
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.10.0/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "2a88764dc1e33ef332c141e5beaf37a3a29853bf0a2affb5d5f21dba8bf34868"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.11.0/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "b9b65921d65b6811f566f71f1cd8e3b73b9aa8dd18b87eb4fda1e7c2adcd75aa"
 
       def install
         bin.install "posh"
@@ -29,8 +29,8 @@ class Poshtui < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/0.10.0/homebrew-tap_Linux_x86_64.tar.gz"
-        sha256 "4b88689bd14d0518cf99ec8ec10892c738da258878adc02ba0b02303ef0c3a71"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/0.11.0/homebrew-tap_Linux_x86_64.tar.gz"
+        sha256 "2b375eeee3bade1a43e997396dc8dc2e5dc918144676c4d86bea47cd979ecd6d"
 
         def install
           bin.install "posh"
@@ -39,8 +39,8 @@ class Poshtui < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/0.10.0/homebrew-tap_Linux_arm64.tar.gz"
-        sha256 "8dad4dfe2a3184256cfebf0585279419de7b6bca1a894db17c72388d6d132bbc"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/0.11.0/homebrew-tap_Linux_arm64.tar.gz"
+        sha256 "0689159b2ed36ba4be0f1d57684268d03dfb74bbb1005e242c51131490e9f8eb"
 
         def install
           bin.install "posh"
