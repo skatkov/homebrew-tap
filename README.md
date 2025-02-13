@@ -6,7 +6,7 @@ Personal homebrew tap with software that I wrote for my personal use. By acciden
 
 ### Install
 ```
-brew tap skatkov/tap && brew install skatkov/tap/stoic
+brew install skatkov/tap/stoic
 ```
 
 ### Source code
@@ -17,5 +17,5 @@ POSH TUI is a terminal based documentation browser for Ruby developers. The sour
 
 ### Install
 ```
-brew tap skatkov/tap && brew install skatkov/tap/poshtui
+brew install skatkov/tap/poshtui
 ```
