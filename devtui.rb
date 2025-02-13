@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage ""
-  version "0.3.0"
+  version "0.3.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.0/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "86440898f038dc130091f5dc1aa5de9f8e4314c811c4aeac4332faa0df15e28a"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.2/devtui_Darwin_x86_64.tar.gz"
+      sha256 "5485f3d75e9d14fdbe296f57f8453ca5a61e6e8d17a9785126ee49cdaa2aaa63"
 
       def install
         bin.install "devtui"
       end
     end
     on_arm do
-      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.0/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "31624dcd887fb872ee6cbb45a94a0dc2f76b0d574de88dbb525bde273523fc07"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.2/devtui_Darwin_arm64.tar.gz"
+      sha256 "110b542ff9183642536a1e7d718161a24ce6e0aa8b57032ff5a9621dd7616ad3"
 
       def install
         bin.install "devtui"
@@ -29,8 +29,8 @@ class Devtui < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.0/homebrew-tap_Linux_x86_64.tar.gz"
-        sha256 "6569c591883325d0110e17cfbda951c1721f0f70f8289ae19edc96d51b64f429"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.2/devtui_Linux_x86_64.tar.gz"
+        sha256 "b1ca05804562ce1f439cbc0e242f4938453be4fd12a12474ac45d88c425f5681"
 
         def install
           bin.install "devtui"
@@ -39,8 +39,8 @@ class Devtui < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.0/homebrew-tap_Linux_arm64.tar.gz"
-        sha256 "edba8adcf3b1a3ab5d6072209606596de3b8423ccab45a1e1314eeb0041447bb"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/v0.3.2/devtui_Linux_arm64.tar.gz"
+        sha256 "50d3354c1725273000a2345870988b04e212a536ee8883832b5e3c24183005e0"
 
         def install
           bin.install "devtui"
