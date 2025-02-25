@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage "https://devtui.com"
-  version "0.5.2"
+  version "0.5.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.5.2/devtui_Darwin_x86_64.tar.gz"
-      sha256 "f2f73347a57841bebd3da179a038f7c343a005b044f9b6b2a9217fd3a4bf9cce"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.5.3/devtui_Darwin_x86_64.tar.gz"
+      sha256 "375f6256998a414eeb6a4421c1b7b73fd5c7a2eaf3b59363c1137195ec6781fc"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.5.2/devtui_Darwin_arm64.tar.gz"
-      sha256 "0540bca13533bba8888f41440e615bca5e829ad7113eab1c7f1811da1609af82"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/v0.5.3/devtui_Darwin_arm64.tar.gz"
+      sha256 "f1a11b706245a311b53c89ff70a7802aedd2df060f6a514e950f769f933f7243"
 
       def install
         bin.install "devtui"
@@ -29,8 +29,8 @@ class Devtui < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.5.2/devtui_Linux_x86_64.tar.gz"
-        sha256 "168b92737796782863ecb98fa262c5dc8516a0ff79356edd053670905e05c041"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/v0.5.3/devtui_Linux_x86_64.tar.gz"
+        sha256 "81a2632e1502a5c77d92a08e5c71781ed9cb43b15afcc33abc509a4464c578e2"
 
         def install
           bin.install "devtui"
@@ -39,8 +39,8 @@ class Devtui < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.5.2/devtui_Linux_arm64.tar.gz"
-        sha256 "176d3322f75bb56fe3b7a690aee52c138193884e71a814833be1126ee9b0d3f8"
+        url "https://github.com/skatkov/homebrew-tap/releases/download/v0.5.3/devtui_Linux_arm64.tar.gz"
+        sha256 "cae3609b2111ce345ccc7f8b543a9c33a1627a7dffa5a487b56db273a47dcaf1"
 
         def install
           bin.install "devtui"
