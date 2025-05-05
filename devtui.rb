@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage "https://devtui.com"
-  version "0.22.0"
+  version "0.23.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.22.0/devtui_Darwin_x86_64.tar.gz"
-      sha256 "70993b2606fad23825d967805b9f4dbfc399537ef6473bd0a1f2b88c578850b5"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.23.0/devtui_Darwin_x86_64.tar.gz"
+      sha256 "fb87471fcae85dd5854314b80e1222c957c72df1e55ca5b4903b0569d35f69b5"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.22.0/devtui_Darwin_arm64.tar.gz"
-      sha256 "bddc23207459195da3438ab203da6c8f21652167b83af6bb964a49613d9e26d6"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.23.0/devtui_Darwin_arm64.tar.gz"
+      sha256 "de2c5f5e055d7e71275599fc56e20396b10504151ba27332c80b2805a0fe74ad"
 
       def install
         bin.install "devtui"
@@ -27,24 +27,18 @@ class Devtui < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.22.0/devtui_Linux_x86_64.tar.gz"
-        sha256 "138aaee28208931c25645b40d0794c39d69742aac0f87af9954a7ffc73a30cdf"
-
-        def install
-          bin.install "devtui"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.23.0/devtui_Linux_x86_64.tar.gz"
+      sha256 "1acab6479da05f9874a46bfef42b8d247bdcf90f9abac997df6142dee363e50d"
+      def install
+        bin.install "devtui"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.22.0/devtui_Linux_arm64.tar.gz"
-        sha256 "1bef56675973adb6789d62f65e3fbb201096d8bcaa85ad6cd0245e09d571bc6d"
-
-        def install
-          bin.install "devtui"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.23.0/devtui_Linux_arm64.tar.gz"
+      sha256 "b0a3dad7a2d5c86aa57cce37cb3e6f022632b7ea3e666adbd9f1027ce3d5241e"
+      def install
+        bin.install "devtui"
       end
     end
   end
