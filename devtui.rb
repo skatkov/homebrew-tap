@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage ""
-  version "0.28.1"
+  version "0.29.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/devtui/releases/download/v0.28.1/devtui_Darwin_x86_64.tar.gz"
-      sha256 "02ee9d4ed45e6f6ad34fe6b463bd1d847988d23b57d729b5fba9cca8ae3b22b8"
+      url "https://github.com/skatkov/devtui/releases/download/v0.29.0/devtui_Darwin_x86_64.tar.gz"
+      sha256 "ce5bb95ad2ab7849cd3da4847a679de025c71f4c72ecb4054ffc123f609a1f87"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/devtui/releases/download/v0.28.1/devtui_Darwin_arm64.tar.gz"
-      sha256 "7a91ee92173551cc26005e5fc68b59bd18aecfcd9a025b9e320b145793991c20"
+      url "https://github.com/skatkov/devtui/releases/download/v0.29.0/devtui_Darwin_arm64.tar.gz"
+      sha256 "d83312beee9dd992317e19e9cf11dddd473ba2f143533e83e3568b5fe9166a33"
 
       def install
         bin.install "devtui"
@@ -28,15 +28,15 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.28.1/devtui_Linux_x86_64.tar.gz"
-      sha256 "d5201fb1850b2b1ec2f378e252e214c167fac265e92b0b1d38588123cefddd57"
+      url "https://github.com/skatkov/devtui/releases/download/v0.29.0/devtui_Linux_x86_64.tar.gz"
+      sha256 "ddb1bfdc66ae8f3029823bed619ce7795480208726cc4db70f746baad9e9c940"
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.28.1/devtui_Linux_arm64.tar.gz"
-      sha256 "5a9ce4af9a774e05f2ad5419d4ec065b8a88ef6477005498fa24e4dda9332227"
+      url "https://github.com/skatkov/devtui/releases/download/v0.29.0/devtui_Linux_arm64.tar.gz"
+      sha256 "969add639f43f2c356c4b578ad35646c614ab21a3d96bb62000b47d1d4ba243f"
       def install
         bin.install "devtui"
       end
