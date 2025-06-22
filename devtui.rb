@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage "https://devtui.com"
-  version "0.27.0"
+  version "0.28.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.27.0/devtui_Darwin_x86_64.tar.gz"
-      sha256 "db6d97ff5f64bbb9be77ee20b4ca66f8ba21fc24a63544b62cc0a2d80a3cdb7d"
+      url "https://github.com/skatkov/devtui/releases/download/devtui-v0.28.0/devtui_Darwin_x86_64.tar.gz"
+      sha256 "59c5f4e08e3d90f0a45af93e0ba5adc5b7f83ed02642d6333fa2ebd82af74e1e"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.27.0/devtui_Darwin_arm64.tar.gz"
-      sha256 "65a851ea73e23ab3e7affab79ff6ebd17610f89bbc4d78b56163e8f89da85a64"
+      url "https://github.com/skatkov/devtui/releases/download/devtui-v0.28.0/devtui_Darwin_arm64.tar.gz"
+      sha256 "5db3168415c8000480da443bac528ea42ad9868d8ba7575a83a9dda52c17ed2c"
 
       def install
         bin.install "devtui"
@@ -28,15 +28,15 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.27.0/devtui_Linux_x86_64.tar.gz"
-      sha256 "1b6b201bc81300ae311a452bda22652ee6816840d02b838a61e294271e849a72"
+      url "https://github.com/skatkov/devtui/releases/download/devtui-v0.28.0/devtui_Linux_x86_64.tar.gz"
+      sha256 "eedd146598cf5b3a266c6a83434a8d612441a18d381f3576e1f842f89e90fc5f"
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/devtui-v0.27.0/devtui_Linux_arm64.tar.gz"
-      sha256 "19f0961a99252e059385adec5ee8e81fdeaafdf36fd743acc8717927ffe786f3"
+      url "https://github.com/skatkov/devtui/releases/download/devtui-v0.28.0/devtui_Linux_arm64.tar.gz"
+      sha256 "56a8a263a68ba3861f11c6f67f48807b5a3410fd4df7a16deed6ed9f2c5b59ed"
       def install
         bin.install "devtui"
       end
