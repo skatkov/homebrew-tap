@@ -5,20 +5,20 @@
 class Sepa < Formula
   desc "A Terminal User Interface (TUI) application for viewing and analyzing SEPA XML payment files"
   homepage "https://github.com/skatkov/sepatui"
-  version "0.1.2"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/sepatui/releases/download/v0.1.2/sepatui_0.1.2_darwin_amd64.tar.gz"
-      sha256 "31bac8503a5d1a2020b1bc26e656a48fcdf63257d2277b9e9f3a984bab2187c3"
+      url "https://github.com/skatkov/sepatui/releases/download/v0.2.0/sepatui_0.2.0_darwin_amd64.tar.gz"
+      sha256 "ee92a84f5f0b95faa99297c2330875cce5c269f5b7416be6c3da6363c0872a9f"
 
       def install
         bin.install "sepatui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/sepatui/releases/download/v0.1.2/sepatui_0.1.2_darwin_arm64.tar.gz"
-      sha256 "1a40ee8a942d378b261a1ab064c134446d1285dd4d9d8f3ece5c910b56eaa57f"
+      url "https://github.com/skatkov/sepatui/releases/download/v0.2.0/sepatui_0.2.0_darwin_arm64.tar.gz"
+      sha256 "360a1e19547cff37b59b53a250507c042063fccba59c3b197070a5f3059264ce"
 
       def install
         bin.install "sepatui"
@@ -28,22 +28,15 @@ class Sepa < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/sepatui/releases/download/v0.1.2/sepatui_0.1.2_linux_amd64.tar.gz"
-      sha256 "1cf43de1d721032362361582ce3e50dc3812cb39249b47e7bcadb8fa36067e25"
-      def install
-        bin.install "sepatui"
-      end
-    end
-    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/sepatui/releases/download/v0.1.2/sepatui_0.1.2_linux_armv6.tar.gz"
-      sha256 "7124f8d04353fbdbcfee8e497e0edbd015abca606f4052d32b7adda1fe30941a"
+      url "https://github.com/skatkov/sepatui/releases/download/v0.2.0/sepatui_0.2.0_linux_amd64.tar.gz"
+      sha256 "40a19bc2aebbeef610610de9a72bfd870399790f79ec871a781577d1584fb008"
       def install
         bin.install "sepatui"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/sepatui/releases/download/v0.1.2/sepatui_0.1.2_linux_arm64.tar.gz"
-      sha256 "90798d5104728ee08f3631d1f9c30f8119fa2aa587d58fec112bbb5dec99cf83"
+      url "https://github.com/skatkov/sepatui/releases/download/v0.2.0/sepatui_0.2.0_linux_arm64.tar.gz"
+      sha256 "90436e76190806ff9675b120582b29bf25d44b2d725ce093fb21c885e3217046"
       def install
         bin.install "sepatui"
       end
