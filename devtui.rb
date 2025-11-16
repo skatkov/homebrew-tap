@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage ""
-  version "0.30.0"
+  version "0.32.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/devtui/releases/download/v0.30.0/devtui_Darwin_x86_64.tar.gz"
-      sha256 "5c4a7f8f30d23fd6bdf161f00a620231f09783d7c9e166fd56360898cfbd04bc"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Darwin_x86_64.tar.gz"
+      sha256 "7271e358332386e66b7daa91ec0b27c8ded2494f0a1bae54c3850116560b6e5d"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/devtui/releases/download/v0.30.0/devtui_Darwin_arm64.tar.gz"
-      sha256 "69f569bc495bebb6263a34369f1d5b290d586a44c5fc72b85318c515a3512478"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Darwin_arm64.tar.gz"
+      sha256 "54e9b71eae609f0e8239bf052874858ffc8f910e4872601fdd61c237c50d42e1"
 
       def install
         bin.install "devtui"
@@ -28,18 +28,58 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.30.0/devtui_Linux_x86_64.tar.gz"
-      sha256 "ed7d36c25ceec5e701ff576559e5ea236e5f743ca7787e60ea6a086e88d8e92b"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Linux_x86_64.tar.gz"
+      sha256 "5d1b700b48ec30c61d2a76bc0bd1350a42664e97b80a5065178ff38b334d885f"
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.30.0/devtui_Linux_arm64.tar.gz"
-      sha256 "e0b359d79e07761bf0986732f8a136c9537502cfbe83616a965d15bc80dfea8d"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Linux_arm64.tar.gz"
+      sha256 "747d91fb2546d96a24a5fd4f3de8ecc27efb30a77f9c1e49f6467fd79867a171"
       def install
         bin.install "devtui"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      def caveats
+        return unless OS.linux?
+
+        session_type = ENV['XDG_SESSION_TYPE']
+
+        message = <<~EOS
+          Clipboard support on Linux requires additional dependencies:
+        EOS
+
+        case session_type
+        when 'wayland'
+          message += <<~EOS
+            Linux with Wayland session type requires additional dependency
+
+            Install: brew install wl-clipboard
+          EOS
+        when 'x11'
+          message += <<~EOS
+            Linux with X11 session type requires additional dependency
+
+            Install: brew install xclip
+            (Alternative: brew install xsel)
+          EOS
+        else
+          message += <<~EOS
+
+            • Wayland: brew install wl-clipboard
+            • X11: brew install xclip (or xsel)
+
+            To check your session type: echo $XDG_SESSION_TYPE
+          EOS
+        end
+
+        message
+      end
+    EOS
   end
 end
