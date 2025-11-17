@@ -3,7 +3,7 @@ cask "devtui" do
   name "devtui"
   desc "A Swiss Army knife for developers"
   homepage ""
-  version "0.32.3"
+  version "0.32.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,32 +14,34 @@ cask "devtui" do
   on_macos do
     on_intel do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Darwin_x86_64.tar.gz"
-      sha256 "77d08d411ff19522162751a74c4ce0a9a2bd56a06dfd632ee52fa37050e8442a"
+      sha256 "b57311f427c1eee1b112069998986dbd0f92e4be7a18ea0a9e6c879563ff3ddf"
     end
     on_arm do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Darwin_arm64.tar.gz"
-      sha256 "06c507833a92683a6a3359c0b53aa868f91b806149cfc82f7093fe73cd60070f"
+      sha256 "436738f8e6d3dfecf95e4ec299541dad682a4ef1480447d0a6234b4d019cc438"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Linux_x86_64.tar.gz"
-      sha256 "4650f8a9ff8b799894d1947a8e38e4068af4e6acf12a84a7d40e3e101fd5a839"
+      sha256 "0535d0e32825d1acd277421aeb8ab3f5a5fa5ccdbab431cfd1ffce0bc264c071"
     end
     on_arm do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Linux_arm64.tar.gz"
-      sha256 "5bb7649e6ecdb786cd4523f236a9b48259378991bcaf4ffe1446ffb116705d3a"
+      sha256 "cf6f60d64a16a11a9f510349699feeb2311fc05a004753ae2a8ed8a4eb82221a"
     end
   end
 
   caveats do
-    "Linux user need to install additional dependencies."
+    "<<EOF"
+    "  Linux user need to install additional dependencies."
     ""
-    "• Wayland: brew install wl-clipboard"
-    "• X11: brew install xclip (or xsel)"
+    "  • Wayland: brew install wl-clipboard"
+    "  • X11: brew install xclip (or xsel)"
     ""
-    "To check your session type: echo $XDG_SESSION_TYPE"
+    "  To check your session type: echo $XDG_SESSION_TYPE"
+    "EOF"
   end
 
   # No zap stanza required
