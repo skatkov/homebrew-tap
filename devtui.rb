@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc "A Swiss Army knife for developers"
   homepage ""
-  version "0.32.0"
+  version "0.32.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Darwin_x86_64.tar.gz"
-      sha256 "7271e358332386e66b7daa91ec0b27c8ded2494f0a1bae54c3850116560b6e5d"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.1/devtui_Darwin_x86_64.tar.gz"
+      sha256 "20a08bfd5d1831072a6507fadb1736d9d33813700847304e08ae535c0c70799a"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Darwin_arm64.tar.gz"
-      sha256 "54e9b71eae609f0e8239bf052874858ffc8f910e4872601fdd61c237c50d42e1"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.1/devtui_Darwin_arm64.tar.gz"
+      sha256 "e7af5f4ee18557470cf4baaf6f757009b6b5fd9465870a97c917bfb4c0cbc323"
 
       def install
         bin.install "devtui"
@@ -28,15 +28,15 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Linux_x86_64.tar.gz"
-      sha256 "5d1b700b48ec30c61d2a76bc0bd1350a42664e97b80a5065178ff38b334d885f"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.1/devtui_Linux_x86_64.tar.gz"
+      sha256 "07dcd6a252125d075551c2c922a787a965126c91f5993a7390198125d683016a"
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.32.0/devtui_Linux_arm64.tar.gz"
-      sha256 "747d91fb2546d96a24a5fd4f3de8ecc27efb30a77f9c1e49f6467fd79867a171"
+      url "https://github.com/skatkov/devtui/releases/download/v0.32.1/devtui_Linux_arm64.tar.gz"
+      sha256 "abf0e73be22077e651f1d3ab26ca5749ba04a5be5d197f4fbf08b8b67c15abd0"
       def install
         bin.install "devtui"
       end
@@ -45,7 +45,7 @@ class Devtui < Formula
 
   def caveats
     <<~EOS
-      def caveats
+      EOS
         return unless OS.linux?
 
         session_type = ENV['XDG_SESSION_TYPE']
@@ -79,7 +79,7 @@ class Devtui < Formula
         end
 
         message
-      end
+      <<~EOS
     EOS
   end
 end
