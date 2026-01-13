@@ -3,7 +3,7 @@ cask "devtui" do
   name "devtui"
   desc "A Swiss Army knife for developers"
   homepage ""
-  version "0.32.5"
+  version "0.33.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "devtui" do
   on_macos do
     on_intel do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Darwin_x86_64.tar.gz"
-      sha256 "7503e7197d51557d8418727d9df4f464a82e6b657a8d13998fcc2695157f734b"
+      sha256 "3e4747206a809a0301d7902db1dd29556a0fb730ace39dda636d37563dcd8945"
     end
     on_arm do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Darwin_arm64.tar.gz"
-      sha256 "81c6fa83e6336a7214f9123de0aafd0744a13b131d378c5ad7c9b30b5568ce37"
+      sha256 "dd61810c222793cab72f2ba365ee36641a665730fb2ef597d88fb527159cddb9"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Linux_x86_64.tar.gz"
-      sha256 "2a5eb271f9e4675a8987f43f7182d57fc72221f314a78801976c04755ca5b356"
+      sha256 "faf5f9326fcb4ad9a4c36f81ecb1620791f6095b8952b1fc89cfee6d5cdb6cf2"
     end
     on_arm do
       url "https://github.com/skatkov/devtui/releases/download/v#{version}/devtui_Linux_arm64.tar.gz"
-      sha256 "9c26d5ea34ed18cbf5dbde1f7ba37bc4ee97df6c90fc42e9e1dab0ae8e6fe623"
+      sha256 "0b1b918d45a917411c4587c4fc56449d88330404ec248be2e60ea621ea8d3d77"
     end
   end
 
