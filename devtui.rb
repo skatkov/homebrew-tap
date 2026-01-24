@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc ""
   homepage "https://devtui.com"
-  version "0.33.2"
+  version "0.34.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/devtui/releases/download/v0.33.2/devtui_Darwin_x86_64.tar.gz"
-      sha256 "e53afb30c0e300e6d54b0dddc3d10edb99fcd245a3605f7fd13d5c4bcbd48dd9"
+      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Darwin_x86_64.tar.gz"
+      sha256 "1f6f523aafa19fade321692a6ab574ada5d5a5570d0dd7b1a6c52b38d672ee10"
 
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/devtui/releases/download/v0.33.2/devtui_Darwin_arm64.tar.gz"
-      sha256 "80712d88377d4270cb76b8d9b169fed346eff81dfe62b3bb9e90ee9438270c4b"
+      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Darwin_arm64.tar.gz"
+      sha256 "dc83177d7d9af7fe761a491ba95511f00d24a4d662ffbd9d0968883438307f4b"
 
       def install
         bin.install "devtui"
@@ -28,15 +28,15 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.33.2/devtui_Linux_x86_64.tar.gz"
-      sha256 "63d8da73f771f576e2a92eb49076c377a0b9d5bd7738184833759486ca0e02f4"
+      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Linux_x86_64.tar.gz"
+      sha256 "bc2ce676bf18b10726ff3ad4dbf93cc77317b9ca2729f66bc71d83a94805e21b"
       def install
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.33.2/devtui_Linux_arm64.tar.gz"
-      sha256 "d8b34982512331649629773f9d6054fc1f93867d47084fa723036a2fefb494f2"
+      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Linux_arm64.tar.gz"
+      sha256 "8c36f9a51153525b44231469b09f00f56705b5792c65dceb04d6500d72d27ce2"
       def install
         bin.install "devtui"
       end
