@@ -5,41 +5,39 @@
 class Stoic < Formula
   desc "Command-line application for daily journaling with plain-text files"
   homepage "https://github.com/skatkov/stoic"
-  version "0.6.2"
+  version "0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Darwin_x86_64.tar.gz"
-      sha256 "3e747fc96bb0faed8514ce9d3a9bc6931186ec9f9449343a5d86323a214cd866"
+      url "https://github.com/skatkov/stoic/releases/download/0.7/stoic_Darwin_x86_64.tar.gz"
+      sha256 "05e747aac065879111067db16a074f08120307a2b8d7222653f50adbb42c0c96"
 
-      def install
+      define_method(:install) do
         bin.install "stoic"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Darwin_arm64.tar.gz"
-      sha256 "f7f77706508ec7e09b631ec5888b420fd27c85fcf99642df447782a1e208d39b"
+      url "https://github.com/skatkov/stoic/releases/download/0.7/stoic_Darwin_arm64.tar.gz"
+      sha256 "371f02e6fd045670051c329ad7dbd7baf3bc6a630846a3bef56209dfea989365"
 
-      def install
+      define_method(:install) do
         bin.install "stoic"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Linux_arm64.tar.gz"
-      sha256 "7abeca398aa99264e4c37c255d5f8824712f65444b3d6b44784294a9d1286fba"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/skatkov/stoic/releases/download/0.7/stoic_Linux_x86_64.tar.gz"
+      sha256 "67f81b4dc349b9953e2e2c5f3457babc089a19a1034177980d37a0540ab4f3c7"
+      define_method(:install) do
         bin.install "stoic"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/skatkov/stoic/releases/download/0.6.2/stoic_Linux_x86_64.tar.gz"
-      sha256 "ee39cafb761a24cf01a136b23a8583ec1c3e3f45d3c1c67dff5849009d041022"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/skatkov/stoic/releases/download/0.7/stoic_Linux_arm64.tar.gz"
+      sha256 "f8ac3ba64dbe029e4200a294236550359aa16f0120fd50b84f6ac13bbdb2a09e"
+      define_method(:install) do
         bin.install "stoic"
       end
     end
