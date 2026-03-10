@@ -5,22 +5,22 @@
 class Devtui < Formula
   desc ""
   homepage "https://devtui.com"
-  version "0.34.0"
+  version "0.34.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Darwin_x86_64.tar.gz"
-      sha256 "1f6f523aafa19fade321692a6ab574ada5d5a5570d0dd7b1a6c52b38d672ee10"
+      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Darwin_x86_64.tar.gz"
+      sha256 "7a5fd7bc71f42a42718fbe94b549b4bb7ad1ee0fe80b5aa2bb6b49c00e24fabb"
 
-      def install
+      define_method(:install) do
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Darwin_arm64.tar.gz"
-      sha256 "dc83177d7d9af7fe761a491ba95511f00d24a4d662ffbd9d0968883438307f4b"
+      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Darwin_arm64.tar.gz"
+      sha256 "28ec79a34b88f7fbefb4b249ae6288600517cd10afb13168668bb3d1a4172197"
 
-      def install
+      define_method(:install) do
         bin.install "devtui"
       end
     end
@@ -28,16 +28,16 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Linux_x86_64.tar.gz"
-      sha256 "bc2ce676bf18b10726ff3ad4dbf93cc77317b9ca2729f66bc71d83a94805e21b"
-      def install
+      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Linux_x86_64.tar.gz"
+      sha256 "8580edc6621c983e1ab4f439d3bf6d439985eb9b7beb8ab7553cd9dbac77e526"
+      define_method(:install) do
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/v0.34.0/devtui_Linux_arm64.tar.gz"
-      sha256 "8c36f9a51153525b44231469b09f00f56705b5792c65dceb04d6500d72d27ce2"
-      def install
+      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Linux_arm64.tar.gz"
+      sha256 "fd22bec1a11b99dec5c2aec7531dccbcab45ed6617dfa89946b3ff92a2b42a58"
+      define_method(:install) do
         bin.install "devtui"
       end
     end
