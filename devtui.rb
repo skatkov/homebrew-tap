@@ -5,20 +5,20 @@
 class Devtui < Formula
   desc ""
   homepage "https://devtui.com"
-  version "0.34.1"
+  version "0.34.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Darwin_x86_64.tar.gz"
-      sha256 "7a5fd7bc71f42a42718fbe94b549b4bb7ad1ee0fe80b5aa2bb6b49c00e24fabb"
+      url "https://github.com/skatkov/devtui/releases/download/0.34.2/devtui_Darwin_x86_64.tar.gz"
+      sha256 "87a4ec143b5da01e7d68c2706a542e4cb56ea8d2d46876b121990eae5e1483b6"
 
       define_method(:install) do
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Darwin_arm64.tar.gz"
-      sha256 "28ec79a34b88f7fbefb4b249ae6288600517cd10afb13168668bb3d1a4172197"
+      url "https://github.com/skatkov/devtui/releases/download/0.34.2/devtui_Darwin_arm64.tar.gz"
+      sha256 "395ce2baf2aabc498da9988a33baf9ebc2739379ae0e4aebb5f7d931f6e4332d"
 
       define_method(:install) do
         bin.install "devtui"
@@ -28,15 +28,15 @@ class Devtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Linux_x86_64.tar.gz"
-      sha256 "8580edc6621c983e1ab4f439d3bf6d439985eb9b7beb8ab7553cd9dbac77e526"
+      url "https://github.com/skatkov/devtui/releases/download/0.34.2/devtui_Linux_x86_64.tar.gz"
+      sha256 "26b96c47610e803d034b3c966da71f72c8552bdc3ca76f4fb159954c03ff6b86"
       define_method(:install) do
         bin.install "devtui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/devtui/releases/download/0.34.1/devtui_Linux_arm64.tar.gz"
-      sha256 "fd22bec1a11b99dec5c2aec7531dccbcab45ed6617dfa89946b3ff92a2b42a58"
+      url "https://github.com/skatkov/devtui/releases/download/0.34.2/devtui_Linux_arm64.tar.gz"
+      sha256 "445da71d3bd6d1c08099a2d156bfb7e1a6ac908a391f35a284ce65238b1e0815"
       define_method(:install) do
         bin.install "devtui"
       end
