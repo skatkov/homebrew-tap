@@ -5,20 +5,20 @@
 class Poshtui < Formula
   desc "Terminal based documentation browser for developers"
   homepage "https://poshtui.com"
-  version "0.18.0"
+  version "0.18.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.0/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "0fe682e1533c51c312cdb72d7dfc5cd9cecae4652a9b97945425323403eb6e31"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.1/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "4ef5d76f0fb4a681e912450038faf98e694bd77a5286f7f30b99ee341452ade7"
 
       define_method(:install) do
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.0/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "e8ef362b40804e7bf70e24ff13345890ecdbdf512913f7afc3a27c679b6ac462"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.1/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "39f4c2b232fe91181722f624dabf21548e8d91675dd6ddf2487762cb87bb8152"
 
       define_method(:install) do
         bin.install "posh"
@@ -28,15 +28,15 @@ class Poshtui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.0/homebrew-tap_Linux_x86_64.tar.gz"
-      sha256 "d131f4c8f249d0a609ec1fc38b969482df54c617c418aaf333207b13d743c759"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.1/homebrew-tap_Linux_x86_64.tar.gz"
+      sha256 "1123129de1a8de148f7ffd810ddc41a759fde5a5d0ead9c84a32f8b02b9fcfe2"
       define_method(:install) do
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.0/homebrew-tap_Linux_arm64.tar.gz"
-      sha256 "05f32c46eabb568f893c2d86ebfc4ded742944e51700a6f46b51af32770f5f42"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/0.18.1/homebrew-tap_Linux_arm64.tar.gz"
+      sha256 "ebd2e2dcef520a04fc53f4ef81ef7f7aeacda8ea015973ac59da5267b0c48ea8"
       define_method(:install) do
         bin.install "posh"
       end
@@ -45,6 +45,6 @@ class Poshtui < Formula
 
   def post_install
     ohai "'posh' needs documentation to be stored in ~/Library/Application Support/posh folder"
-    ohai "Please, run `posh docsets` manually to download documentation"
+    ohai "Please, run `posh sync` manually to download documentation"
   end
 end
