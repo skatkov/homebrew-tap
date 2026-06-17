@@ -23,5 +23,5 @@ POSH TUI is a terminal based documentation browser for Ruby developers. The sour
 
 ### Install
 ```
-brew install skatkov/tap/poshtui
+brew install --cask skatkov/tap/poshtui
 ```
