@@ -5,26 +5,22 @@ cask "poshtui" do
   on_macos do
     on_intel do
       sha256 "b9888ea6825fcf2259558e481bb9a33acb3e10618f2286dada3deb31f56b6f8e"
-      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Darwin_x86_64.tar.gz",
-        verified: "github.com/skatkov/homebrew-tap"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Darwin_x86_64.tar.gz"
     end
     on_arm do
       sha256 "1b5c514d049ef9a323976eff172cddb2f0b5eeb8841eccf4e597a2c7922213c3"
-      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Darwin_arm64.tar.gz",
-        verified: "github.com/skatkov/homebrew-tap"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
       sha256 "48579b563b3c6a8a4141e00d1a5740e7087226e1824f2f7feac51786f7f0b56c"
-      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Linux_x86_64.tar.gz",
-        verified: "github.com/skatkov/homebrew-tap"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Linux_x86_64.tar.gz"
     end
     on_arm do
       sha256 "5d59f5978fad7c865585572d20049e14037b67a7ebb5276e2bf17d1153839aa2"
-      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Linux_arm64.tar.gz",
-        verified: "github.com/skatkov/homebrew-tap"
+      url "https://github.com/skatkov/homebrew-tap/releases/download/#{version}/homebrew-tap_Linux_arm64.tar.gz"
     end
   end
 
